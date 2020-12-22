@@ -222,6 +222,15 @@ define Device/buffalo_wsr-600dhp
 endef
 TARGET_DEVICES += buffalo_wsr-600dhp
 
+define Device/cudy_wr1300
+  DTS := WR1300
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  SUPPORTED_DEVICES += cudy-wr1300 wr1300
+  DEVICE_TITLE := Cudy WR1300
+  DEVICE_PACKAGES :=  kmod-mt7603 kmod-mt76x2 kmod-usb2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-basic
+endef
+TARGET_DEVICES += cudy_wr1300
+
 define Device/dlink_dir-8xx-a1
   $(Device/dsa-migration)
   IMAGE_SIZE := 16000k

@@ -32,6 +32,10 @@ ramips_setup_interfaces()
 	ubnt,unifi-nanohd)
 		ucidef_set_interface_lan "lan"
 		;;
+	cudy,wr1300)
+		ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan" "6t@eth0"
+		;;
 	gehua,ghl-r-001|\
 	hiwifi,hc5962|\
 	xiaomi,mi-router-3-pro|\
